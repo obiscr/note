@@ -13,5 +13,7 @@
     "name": "wuzi",
     "email": "wuzi@obiscr.com",
     "url": "https://obiscr.com"
-  }
+  },
+  "homepage": "https://note.obiscr.com",
+  "license": "MIT"
 }
