@@ -17,7 +17,7 @@ npm install @obiscr/note -g
 
 # Usage
 
-```shell script
+```
 # initialization
 note -i
 
@@ -39,12 +39,13 @@ note -s key
 
 You can also `note -h` or `note -help` to show usage.
 
-```shell script
+```
 Usage: 
-    note               --show all notes 
-    note -i            --initialization 
-    note -a key value  --add note 
-    note -d key        --delete note 
-    note -e key value  --edit note value 
+    note               --show all notes
+    note -i            --initialization
+    note -a key value  --add note
+    note -d key        --delete note
+    note -e key value  --edit note value
+    note -s keyword    --search in notes
     note -h            --show help
 ```
