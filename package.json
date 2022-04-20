@@ -3,7 +3,7 @@
     "build": "pkg note.js"
   },
   "name": "@obiscr/note",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "It's a small tool to temporarily record something in the terminal.Of course, you can also record it permanently.",
   "main": "note.js",
   "bin": {

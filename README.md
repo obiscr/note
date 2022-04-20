@@ -9,7 +9,7 @@ Of course, you can also record it permanently.
 
 If you need to run note on a machine without nodejs environment, you can:
 
-+ [Download]() compiled files directly
++ [Download](https://github.com/obiscr/note/releases/latest) compiled files directly
 
 If you have nodejs environment on your machine
 
@@ -33,7 +33,7 @@ note -a key value
 note -e key newValue
 
 # delete note
-note -d name
+note -d key
 
 # search note
 note -s key

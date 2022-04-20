@@ -5,8 +5,15 @@ const os = require('os')
 
 const workspace = os.homedir() + '/' + '.cnote'
 const config = workspace + '/' + 'conf'
+const excludeCmd = ['-h', '--help', '-v', '--version']
 
 function run (myArgs) {
+    if (!existsWorkspace()) {
+        if (myArgs.length !== 1 && !(myArgs[0] in excludeCmd)) {
+            console.log("Please use `note -i` to init workspace first")
+            return
+        }
+    }
     if (myArgs.length === 0){
         console.log("All notes:")
         list()
@@ -67,7 +74,7 @@ function search(keyword) {
 function initialization() {
     if (!fs.existsSync(workspace)){
         fs.mkdirSync(workspace, { recursive: true });
-        console.log("[Info]Create workspace successful")
+        console.log("[Info]Create workspace:" + workspace)
     } else {
         console.log("[Warn]Workspace already exists")
     }
@@ -75,7 +82,7 @@ function initialization() {
     if (!fs.existsSync(config)){
         fs.writeFile(config, "", (err) => {
             if (err) console.log("[Error]Create config file failed:" + err)
-            console.log("[Info]Create config file successful")
+            console.log("[Info]Create config file:" + config)
         });
     } else {
         console.log("[Warn]Config file already exists")
@@ -148,4 +155,8 @@ function getLine(key) {
         }
     });
     return result
+}
+
+function existsWorkspace() {
+    return !(!fs.existsSync(workspace) || !fs.existsSync(config));
 }
