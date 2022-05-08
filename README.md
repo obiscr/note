@@ -28,7 +28,7 @@ note
 
 # add note
 note -a key value
-note -a 'value' // If the value contains black char, you can use it in single quotes
+note -a key 'value' // If the value contains black char, you can use it in single quotes
 
 # edit note
 note -e key newValue
